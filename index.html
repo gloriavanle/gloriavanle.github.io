@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Gloria Van Le</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Libre+Baskerville:wght@400;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --bg-dark: #131f10;
+      --text-main: #f5f5f5;
+      --accent-gold: #f0d54b;
+      --accent-muted: #a7b7a0;
+      --btn-bg: #2b3a28;
+      --btn-border: #9fb39a;
+      --max-width: 900px;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html, body {
+      margin: 0;
+      padding: 0;
+      background: #111;
+      font-family: "Libre Baskerville", Georgia, "Times New Roman", serif;
+      color: var(--text-main);
+      scroll-behavior: smooth;
+    }
+
+    body {
+      background: var(--bg-dark);
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    /* NAVBAR */
+    .nav-wrapper {
+      background: #020402;
+      color: #ffffff;
+      position: sticky;
+      top: 0;
+      z-index: 20;
+    }
+
+    .nav {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      display: flex;
+      justify-content: center;
+      gap: 4rem;
+      padding: 1.1rem 1rem;
+      font-size: 0.9rem;
+      letter-spacing: 0.18em;
+    }
+
+    .nav a {
+      text-transform: uppercase;
+      padding-bottom: 0.15rem;
+      border-bottom: 1px solid transparent;
+    }
+
+    .nav a:hover {
+      border-color: #ffffff;
+    }
+
+    /* HERO IMAGE + NAME */
+    .hero {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      position: relative;
+    }
+
+    .hero-image {
+      width: 100%;
+      height: 260px;
+      background-image: url("hero.png");
+      background-size: cover;
+      background-position: center;
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+    }
+
+    .hero-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to bottom, rgba(0,0,0,0.25), rgba(0,0,0,0.45));
+    }
+
+    .hero-title {
+      position: relative;
+      font-family: "Playfair Display", "Times New Roman", serif;
+      font-weight: 700;
+      font-size: clamp(2.6rem, 4vw, 3.3rem);
+      letter-spacing: 0.28em;
+      text-transform: uppercase;
+      color: #ffffff;
+      text-align: center;
+      padding: 0 1rem;
+    }
+
+    /* MAIN CONTENT */
+    .main {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 2.5rem 2rem 3rem;
+      background: var(--bg-dark);
+    }
+
+    h2.section-title {
+      font-size: 1.05rem;
+      margin: 0 0 1rem;
+      text-transform: none;
+    }
+
+    /* About section */
+    .about-section {
+      display: grid;
+      grid-template-columns: 220px 1fr;
+      gap: 1.5rem;
+      align-items: flex-start;
+      margin-bottom: 2.5rem;
+    }
+
+    .about-photo {
+      width: 100%;
+      max-width: 220px;
+      border-radius: 4px;
+      overflow: hidden;
+    }
+
+    .about-photo img {
+      display: block;
+      width: 100%;
+      height: auto;
+    }
+
+    .about-text p {
+      margin: 0 0 0.7rem;
+      line-height: 1.6;
+      font-size: 0.9rem;
+    }
+
+    /* Education / Experience */
+    .edu-title,
+    .exp-title {
+      color: var(--accent-gold);
+      font-weight: 700;
+      font-size: 0.9rem;
+      margin: 1.4rem 0 0.5rem;
+    }
+
+    ul {
+      margin: 0 0 0.6rem 1.1rem;
+      padding: 0;
+      font-size: 0.88rem;
+      line-height: 1.55;
+    }
+
+    li + li {
+      margin-top: 0.25rem;
+    }
+
+    /* Resume buttons */
+    .resume-section {
+      margin-top: 2.4rem;
+    }
+
+    .resume-label {
+      margin-bottom: 0.8rem;
+      font-size: 0.9rem;
+    }
+
+    .resume-buttons {
+      display: flex;
+      gap: 1.8rem;
+      flex-wrap: wrap;
+    }
+
+    .btn-pill {
+      min-width: 130px;
+      padding: 0.55rem 1.4rem;
+      border-radius: 999px;
+      border: 1px solid var(--btn-border);
+      background: var(--btn-bg);
+      color: var(--accent-muted);
+      text-align: center;
+      font-size: 0.88rem;
+      cursor: pointer;
+      transition: background 0.15s, transform 0.08s;
+    }
+
+    .btn-pill:hover {
+      background: #3c4c37;
+      transform: translateY(-1px);
+    }
+
+    /* Contact */
+    .contact-section {
+      margin-top: 2.8rem;
+    }
+
+    .contact-row {
+      display: flex;
+      justify-content: flex-start;
+      gap: 4rem;
+      flex-wrap: wrap;
+      margin-top: 1.4rem;
+    }
+
+    .contact-card {
+      display: flex;
+      align-items: center;
+      gap: 0.8rem;
+      font-size: 0.85rem;
+    }
+
+    .contact-icon {
+      width: 46px;
+      height: 46px;
+      border-radius: 12px;
+      overflow: hidden;
+      background: #000;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .contact-icon img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+
+    .contact-card span {
+      display: block;
+    }
+
+    .contact-caption {
+      font-size: 0.8rem;
+      color: var(--accent-muted);
+      margin-top: 0.2rem;
+    }
+
+    @media (max-width: 720px) {
+      .nav {
+        gap: 2rem;
+        font-size: 0.8rem;
+      }
+
+      .main {
+        padding: 1.8rem 1.2rem 2.5rem;
+      }
+
+      .about-section {
+        grid-template-columns: 1fr;
+      }
+
+      .about-photo {
+        max-width: 200px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAV -->
+  <div class="nav-wrapper">
+    <nav class="nav">
+      <a href="#home">Home</a>
+      <a href="#about">About</a>
+      <a href="#resume">Resume / CV</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </div>
+
+  <!-- HERO -->
+  <header id="home" class="hero">
+    <div class="hero-image">
+      <div class="hero-overlay"></div>
+      <div class="hero-title">Gloria Van Le</div>
+    </div>
+  </header>
+
+  <!-- MAIN CONTENT -->
+  <main class="main">
+
+    <!-- About -->
+    <section id="about">
+      <h2 class="section-title">About Me</h2>
+      <div class="about-section">
+        <div class="about-photo">
+          <!-- replace profile.jpg with your own filename -->
+          <img src="profile.jpg" alt="Photo of Gloria Van Le">
+        </div>
+        <div class="about-text">
+          <p>Hi! I’m a senior at the University of Minnesota majoring in Data Science.</p>
+          <p>I’m passionate about using data, machine learning, and thoughtful analysis to solve real-world problems. I love building projects that blend creativity with technical skill, and I’m always excited to learn something new and take on meaningful challenges.</p>
+
+          <div class="edu-title">Education Background</div>
+          <ul>
+            <li>
+              B.S. Data Science, University of Minnesota, Minneapolis, Minnesota, USA  
+              <br>Class of 2026
+            </li>
+            <li>
+              Thai Binh High School for the Gifted, Thai Binh, Vietnam  
+              <br>Class of 2019–2022
+            </li>
+          </ul>
+
+          <div class="exp-title">Undergrad Research and Work Experience</div>
+          <ul>
+            <li>
+              <strong>Research Assistant</strong> 
+              <br>Working with Prof. Shancong Mou on machine learning and optimization research for real-world engineering systems. My work includes preprocessing sensor and time-series data, extracting features, analyzing patterns, and evaluating predictive models.
+            </li>
+            <li>
+              <strong>Teaching Assistant</strong> 
+              <br>Teaching Assistant for Computer Science and Mathematics courses at the University of Minnesota, supporting classes of 70–120 students through leading discussions, holding office hours, and assisting with grading. Helped students with discrete math, algorithms, precalculus, algebra, trigonometry, probability, and Python programming.
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Resume / CV -->
+    <section id="resume" class="resume-section">
+      <div class="resume-label">Resume / CV</div>
+      <div class="resume-buttons">
+        <!-- link these to your PDF files -->
+        <a class="btn-pill" href="GloriaVanLe_Resume25.pdf" target="_blank">Resume</a>
+        <a class="btn-pill" href="GloriaVanLe_CV25.pdf" target="_blank">CV</a>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="contact-section">
+      <h2 class="section-title">Contact</h2>
+
+      <div class="contact-row">
+        <div class="contact-card">
+          <div class="contact-icon">
+            <!-- replace gmail.png with your own Gmail icon file or remove <img> and put text -->
+            <img src="gmail.png" alt="Gmail icon">
+          </div>
+          <div>
+            <span>Email me at:</span>
+            <span class="contact-caption">gloriavanle2030@gmail.com</span>
+          </div>
+        </div>
+
+        <div class="contact-card">
+          <div class="contact-icon">
+            <!-- replace linkedin.png with your own LinkedIn icon file -->
+            <img src="linkedin.png" alt="LinkedIn icon">
+          </div>
+          <div>
+            <span>Let’s connect on LinkedIn</span>
+            <span class="contact-caption">linkedin.com/in/gloria-van-le-132256260/</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+</body>
+</html>
