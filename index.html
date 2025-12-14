@@ -118,9 +118,10 @@
     }
 
     h2.section-title {
-      font-size: 1.05rem;
+      font-size: 1.5rem;
       margin: 0 0 1rem;
       text-transform: none;
+      color: var(--accent-gold)
     }
 
     /* About section */
@@ -156,7 +157,8 @@
     .exp-title {
       color: var(--accent-gold);
       font-weight: 700;
-      font-size: 0.9rem;
+      /* font-size: 0.9rem; */
+      font-size: 1.1rem;
       margin: 1.4rem 0 0.5rem;
     }
 
@@ -270,6 +272,50 @@
         max-width: 200px;
       }
     }
+
+    .edu-entry {
+      margin-bottom: 1.1rem;
+    }
+
+    .edu-entry em {
+      display: block;
+      font-size: 0.88rem;
+      color: var(--accent-muted);
+      margin-top: 0.15rem;
+    }
+
+    .edu-entry ul {
+      margin-top: 0.4rem;
+    }
+
+    /* .edu-entry strong {
+      display: block;
+      font-size: 0.9rem;
+      margin-bottom: 0.35rem;
+    } */
+
+    .exp-entry {
+      margin-bottom: 1.4rem;
+    }
+/* 
+    .exp-entry strong {
+      display: block;
+      font-size: 0.9rem;
+      margin-bottom: 0.35rem;
+    } */
+
+    .exp-entry em {
+      display: block;
+      font-size: 0.88rem;
+      color: var(--accent-muted);
+      margin-top: 0.15rem;
+    }
+
+    ul li strong {
+      display: inline;
+    }
+
+
   </style>
 </head>
 <body>
@@ -279,7 +325,11 @@
     <nav class="nav">
       <a href="#home">Home</a>
       <a href="#about">About</a>
-      <a href="#resume">Resume / CV</a>
+      <a href="#background">Education Background</a>
+      <a href="#research">Research Experience</a>
+      <a href="#teaching">Teaching Experience</a>
+      <a href="#activities">Other Activities</a>
+      <a href="#resume">CV</a>
       <a href="#contact">Contact</a>
     </nav>
   </div>
@@ -304,42 +354,158 @@
           <img src="profile2.png" alt="Photo of Gloria Van Le">
         </div>
         <div class="about-text">
-          <p>I’m Gloria Van Le, currently finishing my studies in Data Science and Computer Science at the University of Minnesota. I’ve always been drawn to mathematical thinking - I grew up competing in math contests and was the kind of kid who enjoyed solving problems just to see how far an idea could stretch. Over time, that early love for structure and logic turned into a deep curiosity about how machines learn from data and why their predictions sometimes break down in the messy real world. I’m especially fascinated by questions about uncertainty: how to make models robust when information is scarce, noisy, or constantly changing. Much of my recent work focuses on time-series forecasting, rare-event modeling, and learning under distribution shifts. Through both coursework and research, I’ve tried to bridge theoretical foundations with practical, high-stakes problems. I’m currently applying to PhD programs because I want to keep exploring these questions and contribute to machine learning methods that are both reliable and adaptable.
+          <p>I’m <strong>Gloria Van Le</strong>, currently finishing my studies in <strong>Data Science and Computer Science</strong> at the University of Minnesota. I’ve always been drawn to mathematical thinking - I grew up competing in math contests and was the kind of kid who enjoyed solving problems just to see how far an idea could stretch. Over time, that early love for structure and logic turned into a deep curiosity about how machines learn from data and why their predictions sometimes break down in the messy real world. I’m especially fascinated by questions about uncertainty: how to make models robust when information is scarce, noisy, or constantly changing. Much of my recent work focuses on time-series forecasting, rare-event modeling, and learning under distribution shifts. Through both coursework and research, I’ve tried to bridge theoretical foundations with practical, high-stakes problems. I’m currently applying to PhD programs because I want to keep exploring these questions and contribute to machine learning methods that are both reliable and adaptable.
 </p>
 
-          <div class="edu-title">Education Background</div>
-          <ul>
-            <li>
-              B.S. Data Science, University of Minnesota, Minneapolis, Minnesota, USA  
-              <br>Class of 2026
-            </li>
-            <li>
-              Thai Binh High School for the Gifted, Thai Binh, Vietnam  
-              <br>Class of 2019–2022
-            </li>
-          </ul>
+          </div>
 
-          <div class="exp-title">Undergrad Research and Work Experience</div>
-          <ul>
-            <li>
-              <strong>Research Assistant</strong> 
-              <br>Working with Prof. Shancong Mou on machine learning and optimization research for real-world engineering systems. My work includes preprocessing sensor and time-series data, extracting features, analyzing patterns, and evaluating predictive models.
-            </li>
-            <li>
-              <strong>Teaching Assistant</strong> 
-              <br>Teaching Assistant for Computer Science and Mathematics courses at the University of Minnesota, supporting classes of 70–120 students through leading discussions, holding office hours, and assisting with grading. Helped students with discrete math, algorithms, precalculus, algebra, trigonometry, probability, and Python programming.
-            </li>
-          </ul>
         </div>
       </div>
     </section>
 
+    <section id="background">
+        <h2 class="section-title">Education Background</h2>
+
+            <div class="edu-entry">
+              <strong>University of Minnesota – Twin Cities</strong><br>
+              <em>B.S. in Data Science, B.A. in Computer Science (expected graduation Spring 2026)</em>
+              <ul>
+                <li>Focus areas: Machine Learning, Probability &amp; Statistics, Algorithms, and Data Systems</li>
+                <li>Additional coursework in Mathematics (Real Analysis, Probability Theory, Linear Algebra)</li>
+                <li>GPA: 3.95/4.0 in Data Science, Computer Science, and Math coursework; 3.8/4.0 overall</li>
+              </ul>
+            </div>
+
+            <div class="edu-entry">
+              <strong>Thai Binh High School for the Gifted – Thai Binh Province, Vietnam</strong><br>
+              <em>Mathematics Specialized Program (completed 2022)</em>
+            </div>
+    </section>
+    
+
+    <section id="research">
+        <h2 class="section-title">Research Experience</h2>
+
+          <div class="exp-entry">
+            <strong>Research Assistant – Time-Series Forecasting &amp; Rare-Event Modeling</strong>
+            <em>(with Prof. Shancong Mou, University of Minnesota)</em>
+            
+            <ul>
+              <li>
+                This research focuses on developing data-driven machine learning models to forecast peak
+                electricity consumption in HVAC systems—an important challenge because peak loads drive up
+                energy costs and place significant strain on the power grid.
+              </li>
+              <li>
+                Implemented a Transformer-based deep learning model for supervised time-series forecasting,
+                applying it to real-world datasets that were highly noisy, contained substantial missing data,
+                and included adversarial or rare high-impact events that disrupt normal usage patterns.
+              </li>
+              <li>
+                Predicted short-term energy peaks (15 minutes, 30 minutes, 1 hour, and 6 hours) several hours
+                ahead. Through improved data preprocessing, feature engineering, and analysis of HVAC behavior,
+                observed meaningful gains in accuracy and stability even under noisy or adversarial conditions.
+              </li>
+              <li>
+                Gained experience conducting collaborative research in an industrial engineering context,
+                designing and refining experiments, evaluating model performance, and questioning modeling
+                assumptions. Regular feedback from Prof. Mou strengthened my technical communication skills,
+                particularly in preparing slides and presenting complex ideas clearly.
+              </li>
+            </ul>
+          </div>
+
+          <div class="exp-entry">
+            <strong>Course Projects – Recommender Systems &amp; Financial Prediction</strong>
+              <em>(with Profs. Krishnamurthy Iyer and Paul Schrater, University of Minnesota)</em>
+            
+            <ul>
+              <li>
+                Worked on two contrasting behavior-modeling problems: Netflix user recommendation modeling,
+                where viewing patterns are relatively stable and predictable, and stock-market analysis,
+                where behavior is highly volatile and driven by rare, high-impact events.
+              </li>
+              <li>
+                This contrast provided firsthand insight into how machine-learning models behave under
+                different levels of noise, uncertainty, and distribution shift.
+              </li>
+              <li>
+                Used Python, Pandas, PyTorch, TensorFlow, and classical machine learning methods
+                (Random Forests, Linear Regression, clustering algorithms) to compare long-term user behavior
+                with the abrupt fluctuations characteristic of financial time series.
+              </li>
+              <li>
+                Observing how the same model performed reliably on one dataset yet failed on another
+                strengthened my interest in developing algorithms that remain robust under uncertainty and
+                rare events, reinforcing my motivation to pursue research in adaptive learning systems.
+              </li>
+            </ul>
+
+    </section>
+          
+
+    <section id="teaching">
+        <h2 class="section-title">Teaching Experience</h2>
+
+    <p>
+      Over the equivalent of six semesters, I served as a teaching assistant across several STEM courses:
+    </p>
+
+    <ul>
+      <li>
+        <b>Discrete Structures and Algorithms</b>, classes of 60-70 students (3 semesters) —
+        taught programming algorithms through hands-on programming exercises, led discussion sections,
+        designed homework materials, held office hours, and graded assignments and exams.
+      </li>
+      <li>
+        <b>Precalculus II</b>, classes of approximately 120 students (1 semester) —
+        supported instruction on trigonometric functions, inverse trigonometry, polar coordinates,
+        complex numbers, conic sections, and sequences and series through in-class assistance,
+        office hours, and grading.
+      </li>
+      <li>
+        <b>Algebra and Probability</b>, classes of 70-100 students (2 semesters) —
+        assisted with teaching functions, polynomial and rational models, exponential and logarithmic
+        functions, and introductory probability concepts, while providing individualized student
+        support and grading coursework and exams.
+      </li>
+    </ul>
+
+    <p>
+      Teaching has been one of the most rewarding parts of my undergraduate career. Explaining difficult
+      concepts forced me to sharpen my own understanding, and interacting with students taught me how to
+      communicate abstract ideas clearly. It also reinforced my interest in mentoring and confirmed that
+      I genuinely enjoy academic environments where learning and discovery happen side by side.
+    </p>
+
+    </section>
+
+
+    <section id="activities">
+      <h2 class="section-title">Other Activities</h2>
+
+      <p>
+        Outside of academics, I enjoy playing sports such as tennis and badminton, cooking, exploring new cafés,
+        and traveling whenever I can. I’m also passionate about personal projects related to data visualization,
+        recommender systems, and time-series analytics.
+      </p>
+
+      <p>
+        In my free time, I like experimenting with new machine learning frameworks, contributing to small
+        open-source projects, and finding creative ways to connect the mathematical ideas I grew up loving
+        with real-world data problems.
+      </p>
+
+    </section>
+    
+
+
     <!-- Resume / CV -->
     <section id="resume" class="resume-section">
-      <div class="resume-label">Resume / CV</div>
+      <h2 class="section-title">CV</h2>
       <div class="resume-buttons">
         <!-- link these to your PDF files -->
-        <a class="btn-pill" href="GloriaVanLe_Resume25.pdf" target="_blank">Resume</a>
+        <!-- <a class="btn-pill" href="GloriaVanLe_Resume25.pdf" target="_blank">Resume</a> -->
         <a class="btn-pill" href="GloriaVanLe_CV25.pdf" target="_blank">CV</a>
       </div>
     </section>
